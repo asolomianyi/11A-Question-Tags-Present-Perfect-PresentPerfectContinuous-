@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>English Grammar: Question Tags & Present Perfect</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f4ef;--card:#fff;--tx:#1f2430;--mu:#6b7280;--ac:#c0392b;--ok:#1e8e4e;--okb:#e3f5ea;--no:#c0392b;--nob:#fdeaea;--bd:#e4e0d6}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15171c;--card:#1f232b;--tx:#eceef2;--mu:#a3aab7;--ac:#ff7a66;--ok:#5fd18a;--okb:#16301f;--no:#ff8a7a;--nob:#3a1d1b;--bd:#323846}}
+:root[data-theme="dark"]{--bg:#15171c;--card:#1f232b;--tx:#eceef2;--mu:#a3aab7;--ac:#ff7a66;--ok:#5fd18a;--okb:#16301f;--no:#ff8a7a;--nob:#3a1d1b;--bd:#323846}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.uk{font-weight:300;color:var(--mu);font-size:.88em;line-height:1.4;margin-top:2px}
+.fb .uk{color:inherit;opacity:.85}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;border-bottom:1px solid var(--bd);display:flex;gap:6px;padding:8px 12px;overflow-x:auto}
+header button{white-space:nowrap}
+button{font:inherit;cursor:pointer;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:10px;padding:6px 12px;text-align:center}
+button .uk{display:block;font-size:.72em;margin:0;color:inherit;opacity:.75}
+button:hover:not(:disabled){border-color:var(--ac)}
+header button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+main{max-width:820px;margin:0 auto;padding:18px 14px 100px}
+h1{font-size:2rem;margin:.2em 0;color:var(--ac)}h2{margin:.5em 0 .1em}h3{margin:1.1em 0 .1em}
+.box{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:12px 16px;margin:10px 0}
+.box{border-left:5px solid var(--k,var(--bd));background:color-mix(in srgb,var(--k,transparent) 7%,var(--card))}
+.box.rule{--k:#3b82f6}.box.use{--k:#8b5cf6}.box.mark{--k:#22c55e}.box.warn{--k:#f59e0b}.box.rem{--k:#14b8a6}.box.ex{--k:#94a3b8}
+.box .uk{margin-top:8px;padding-top:6px;border-top:1px dashed var(--bd)}
+.tg{display:inline-block;background:var(--k);color:#fff;font-size:.68rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:2px 9px;border-radius:999px;margin-bottom:7px}
+.box i{font-style:normal;font-weight:400;background:color-mix(in srgb,var(--k) 16%,transparent);padding:1px 8px;border-radius:6px;display:inline-block;margin:2px 0}
+.box b{color:var(--k)}
+.fm{display:flex;gap:10px;align-items:baseline;background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:6px 10px;margin:6px 0;font-weight:600}
+.sg{font-weight:700;font-size:1.1em;width:1.1em;text-align:center;flex:none}
+h3{border-left:4px solid var(--ac);padding-left:10px}
+th{background:color-mix(in srgb,var(--ac) 12%,var(--card))}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.95rem}td,th{border:1px solid var(--bd);padding:6px 9px;text-align:left;vertical-align:top}th{background:var(--bg)}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-top:14px}
+.g button{padding:14px;text-align:left;font-weight:600}
+.q{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;margin:9px 0}
+.q.ok{border-color:var(--ok)}.q.no{border-color:var(--no)}
+.opts{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+.opt.ok{background:var(--okb);border-color:var(--ok)}.opt.no{background:var(--nob);border-color:var(--no)}
+.bl{border-bottom:2px solid var(--ac);padding:0 4px}
+input{font:inherit;width:11em;max-width:100%;padding:4px 8px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx)}
+.fb{margin-top:8px;padding:7px 10px;border-radius:8px;font-size:.95rem}
+.fb.ok{background:var(--okb);color:var(--ok)}.fb.no{background:var(--nob);color:var(--no)}
+nav{position:fixed;left:0;right:0;bottom:env(safe-area-inset-bottom,0px);background:var(--bg);border-top:1px solid var(--bd);display:flex;justify-content:center;align-items:center;gap:16px;padding:8px}
+nav button{min-width:100px}
+</style></head><body>
+<header id="tabs"></header>
+<main id="m"></main>
+<nav><button id="pv">← Back</button><span id="ct" class="uk"></span><button id="nx">Next →</button></nav>
+<script>
+const U=t=>`<div class=uk>${t}</div>`,c=(e,u)=>e+U(u),
+B=(e,u)=>{let k="ex",l="Example",t=e.replace(/<[^>]+>/g,"").trim();
+ if(/^(Formula|Rule)/.test(t)){k="rule";l="Rule"}else if(/^Markers/.test(t)){k="mark";l="Markers"}else if(/^Remember/.test(t)){k="rem";l="Remember"}else if(t[0]=="•"){k="warn";l="Watch out"}else if(/^\d\)/.test(t)){k="use";l="Use"}
+ if(k=="rule")e=e.split("<br>").map(x=>/^[＋－?]/.test(x)?`<div class=fm><span class=sg style="color:${{"＋":"#16a34a","－":"#dc2626","?":"#2563eb"}[x[0]]}">${x[0]}</span><span>${x.slice(1)}</span></div>`:x+"<br>").join("");
+ return `<div class="box ${k}"><span class=tg>${l}</span><div>${e}</div>${U(u)}</div>`},
+H2=(e,u)=>`<h2>${e}</h2>${U(u)}`,H3=(e,u)=>`<h3>${e}</h3>${U(u)}`,
+TB=(h,r)=>`<div class=tw><table><tr>${h.map(x=>`<th>${x}`).join("")}</tr>${r.map(x=>`<tr>${x.map(y=>`<td>${y}`).join("")}</tr>`).join("")}</table></div>`,
+TH=["Situation|Ситуація","Tag|Тег","Example|Приклад"].map(x=>c(...x.split("|")));
+const T=[
+{n:"Question Tags",u:"Розділові питання",th:H2("Question Tags","Розділові питання")+
+B("<b>Rule:</b> positive statement → <b>negative</b> tag; negative statement → <b>positive</b> tag. Use the same auxiliary (is, have, can, would…); if there is none, use do / does / did. The tag always ends with a <b>pronoun</b>.<br><i>She is cooking, isn't she? · He shouldn't eat it, should he? · Peter enjoys sweets, doesn't he?</i>","<b>Правило:</b> ствердження → заперечний тег; заперечення → ствердний тег. Те саме допоміжне дієслово (is, have, can, would…); якщо його немає — do / does / did. Після нього завжди займенник.")+
+H3("Why do we use them?","Навіщо вони потрібні?")+
+B("1) to encourage a reply: <i>Let's have coffee, shall we?</i><br>2) to reinforce what was said (positive + positive tag): <i>That's a great restaurant, that is.</i><br>3) to confirm something: <i>He shouldn't eat too much, should he?</i><br>4) to request politely: <i>I couldn't borrow your book, could I?</i>","1) заохотити відповідь; 2) підсилити сказане (ствердження + ствердний тег); 3) підтвердити; 4) ввічливо попросити.")+
+H3("Exceptions","Винятки")+
+TB(TH,[[c("I am","Я є"),"aren't I?",c("I'm late, aren't I?","Я запізнююсь, так?")],
+[c("Let's","Давайте"),"shall we?",c("Let's go, shall we?","Ходімо, добре?")],
+[c("Imperative","Наказовий спосіб"),"will you?",c("Close the door, will you?","Зачини двері, добре?")],
+[c("I don't suppose / think","Мабуть, ні / не думаю"),c("positive tag","ствердний тег"),c("I don't suppose you could, could you?","Ви ж не могли б, так?")],
+[c("this / that · these / those","цей / той · ці / ті"),"it · they",c("That's good, isn't it?","Це добре, чи не так?")],
+[c("everybody, nobody","усі, ніхто"),"they",c("Everybody likes it, don't they?","Усім подобається, так?")],
+[c("nothing, something","ніщо, щось"),"it",c("Nothing happened, did it?","Нічого не сталося, так?")],
+[c("never, hardly, rarely","ніколи, ледве, рідко"),c("positive tag","ствердний тег"),c("You never eat fish, do you?","Ти ніколи не їси рибу, так?")],
+[c("there is / are","є"),"there",c("There's milk, isn't there?","Є молоко, чи не так?")],
+[c("had better · used to","краще б · раніше"),"hadn't · didn't",c("We'd better leave, hadn't we?","Нам краще піти, чи не так?")]]),
+mc:[["She is cooking, ___?","isn't she|doesn't she|is she",0,"Positive statement → negative tag with the same auxiliary (is).","Ствердження → заперечний тег із тим самим допоміжним дієсловом is.","Вона готує, чи не так?"],
+["He shouldn't eat too much chocolate, ___?","shouldn't he|should he|does he",1,"Negative statement → positive tag, same auxiliary (should).","Заперечення → ствердний тег, допоміжне те саме (should).","Йому не варто їсти забагато шоколаду, чи не так?"],
+["I'm late, ___?","amn't I|aren't I|isn't I",1,"Exception: after I am the tag is aren't I.","Виняток: після I am тег — aren't I.","Я запізнююся, правда?"],
+["Let's have coffee, ___?","will we|shall we|don't we",1,"After Let's we always use shall we.","Після Let's завжди shall we.","Давайте вип'ємо кави, добре?"],
+["Those boys need food, ___?","don't they|don't those|doesn't it",0,"those → they; need is Present Simple → don't.","those → they; need (Present Simple) → don't.","Тим хлопцям потрібна їжа, чи не так?"],
+["Nobody called, ___?","didn't they|did they|did nobody",1,"Nobody is negative, so the tag is positive; we use they.","Nobody — заперечне слово, тому тег ствердний; вживаємо they.","Ніхто не дзвонив, так?"],
+["Close the door, ___?","do you|will you|shall we",1,"After an imperative we use will you?","Після наказового способу — will you?","Зачини двері, добре?"],
+["That's a great restaurant, ___?","isn't that|isn't it|is it",1,"that → it; positive statement → negative tag.","that → it; ствердження → заперечний тег.","Це чудовий ресторан, чи не так?"],
+["You never eat fish, ___?","don't you|do you|did you",1,"never is negative, so the tag is positive; Present Simple → do.","never — заперечне слово, тому тег ствердний; Present Simple → do.","Ти ніколи не їси рибу, так?"],
+["I don't suppose you could help, ___?","couldn't you|could you|can't you",1,"After I don't suppose the tag is positive and repeats could.","Після I don't suppose тег ствердний і повторює could.","Мабуть, ви не могли б допомогти, чи не так?"]],
+fb:[["Peter enjoys sweets, ___?","doesn't he","Present Simple, he → doesn't + the pronoun he (not the name).","Present Simple, he → doesn't + займенник he (не ім'я).","Пітер любить солодке, чи не так?"],
+["They came to the party, ___?","didn't they","came is Past Simple → did; negative tag: didn't they.","came — Past Simple → did; заперечний тег didn't they.","Вони прийшли на вечірку, чи не так?"],
+["You haven't tried this, ___?","have you","Negative statement → positive tag with the same have.","Заперечення → ствердний тег із тим самим have.","Ти цього не пробував, так?"],
+["There's some milk, ___?","isn't there","There is → isn't there (there is the subject).","There is → isn't there (there як підмет).","Є трохи молока, чи не так?"],
+["Everybody likes pizza, ___?","don't they","Everybody → they; the auxiliary is do.","Після everybody займенник they, допоміжне — do.","Усі люблять піцу, чи не так?"],
+["We'd better leave, ___?","hadn't we","'d better = had better → hadn't.","'d better = had better → hadn't.","Нам краще піти, чи не так?"],
+["He used to smoke, ___?","didn't he","used to → the tag uses did: didn't he.","used to → тег із did: didn't he.","Він раніше курив, так?"],
+["The kids would love ice cream, ___?","wouldn't they","Auxiliary would → wouldn't; kids → they.","Допоміжне would → wouldn't; kids → they.","Діти б залюбки з'їли морозиво, чи не так?"],
+["She can't cook, ___?","can she","Negative statement → positive tag with can.","Заперечення → ствердний тег із can.","Вона не вміє готувати, так?"],
+["I'm right, ___?","aren't I","Exception: I am → aren't I.","Виняток: I am → aren't I.","Я правий, чи не так?"]]},
+{n:"Present Perfect",u:"Present Perfect",th:H2("Present Perfect","Теперішній доконаний час")+
+B("<b>Formula:</b><br>＋ have / has + V3 — <i>I have learned to cook.</i><br>－ haven't / hasn't + V3 — <i>She hasn't finished yet.</i><br>? Have / Has + subject + V3? — <i>Have you tried this?</i><br>has goes with he / she / it. V3: regular verbs + -ed; irregular verbs must be learned (buy–bought, eat–eaten, go–gone).","<b>Формула:</b> ствердження — have / has + V3; заперечення — haven't / hasn't + V3; питання — Have / Has + підмет + V3? has — з he / she / it. V3: правильні дієслова + -ed; неправильні треба вчити.")+
+H3("When do we use it?","Коли вживається?")+
+B("1) a past action with a result now: <i>I've burnt the sauce.</i><br>2) life experience: <i>Have you ever eaten mussels?</i><br>3) an unfinished period (today, this week): <i>I've drunk three coffees today.</i><br>4) recent news: <i>Frank has just bought a book.</i><br>5) a state up to now (for / since): <i>Australia has had a system since 1987.</i>","1) минула дія з результатом зараз; 2) життєвий досвід; 3) незавершений період (today, this week); 4) нещодавня подія; 5) стан, що триває до зараз (for / since).")+
+B("<b>Markers:</b> ever, never, just, already, yet, so far, recently, lately, since, for, today.<br><b>for</b> + period (for 2 hours) · <b>since</b> + starting point (since 1987)","<b>Маркери:</b> ever, never, just, already, yet, so far, recently, lately, since, for, today. for + період; since + точка відліку.")+
+H3("Exceptions and traps","Винятки та пастки")+
+B("• With yesterday, last week, in 2010, ago → <b>Past Simple</b>: <i>I saw him yesterday</i> (not have seen).<br>• <i>has been to</i> = visited and came back; <i>has gone to</i> = went and is still there.<br>• yet — in negatives and questions; already — in positive sentences.","• З yesterday, last week, in 2010, ago — Past Simple. • has been to = побував і повернувся; has gone to = поїхав і ще там. • yet — у запереченнях і питаннях; already — у ствердженнях."),
+mc:[["Frank ___ three cookbooks.","has just bought|have just bought|just buyed",0,"Frank = he → has; bought is V3 of buy (irregular).","Frank = he → has; bought — V3 від buy (неправильне).","Френк щойно купив три кулінарні книги."],
+["I ___ him yesterday.","have seen|saw|have saw",1,"yesterday is a finished time → Past Simple.","yesterday — закінчений час, тому Past Simple.","Я бачив його вчора."],
+["___ you ever ___ mussels?","Did … eat|Have … eaten|Have … ate",1,"Experience → Present Perfect: have + V3 (eaten).","Досвід → Present Perfect: have + V3 (eaten).","Ти коли-небудь їв мідії?"],
+["She ___ to Italy three times.","has been|has gone|was going",0,"has been to = visited and came back; has gone means she is still there.","has been to = побувала й повернулась; has gone — ще там.","Вона була в Італії тричі."],
+["We ___ here since 2020.","live|have lived|are living",1,"since + starting point → Present Perfect.","since + точка відліку → Present Perfect.","Ми живемо тут із 2020 року."],
+["They ___ finished yet.","haven't|didn't|hasn't",0,"They → have; negative with yet → haven't + V3.","They → have; заперечення з yet → haven't + V3.","Вони ще не закінчили."],
+["Australia ___ an approved system since 1987.","has had|had|has been having",0,"have is a state verb (no Continuous); Australia = it → has.","have — дієслово стану, Continuous неможливий; Australia = it → has.","В Австралії діє затверджена система з 1987 року."],
+["He ___ his keys! He can't get in.","has lost|is losing|lose",0,"The result matters now → has + V3.","Результат важливий зараз → has + V3.","Він загубив ключі! Не може зайти."],
+["I ___ three coffees today.","drank|have drunk|drunk",1,"Today isn't over → Present Perfect; drunk is V3 of drink.","today ще не закінчився → Present Perfect; drunk — V3 від drink.","Я сьогодні випив три кави."],
+["___ she ___ the dishes yet?","Has … washed|Have … washed|Has … wash",0,"She → Has; V3 after the subject (washed).","She → Has; після підмета V3 (washed).","Вона вже помила посуд?"]],
+fb:[["I ___ (learn) how to prepare Braciole.","have learned|have learnt|'ve learned|'ve learnt","have / has + V3: have learned.","have / has + V3: have learned.","Я навчився готувати брачолу."],
+["Frank ___ (buy) three new books.","has bought|'s bought","Frank = he → has; V3 of buy is bought.","Frank = he → has; V3 від buy — bought.","Френк купив три нові книги."],
+["She ___ (not finish) yet.","hasn't finished|has not finished","she → hasn't + V3.","she → hasn't + V3.","Вона ще не закінчила."],
+["Have you ever ___ (eat) mussels?","eaten","After have we need V3: eat – ate – eaten.","Після have потрібна V3: eat – ate – eaten.","Ти коли-небудь їв мідії?"],
+["They ___ (live) here since 2015.","have lived|'ve lived","since → Present Perfect: have + lived.","since → Present Perfect: have + lived.","Вони живуть тут із 2015 року."],
+["We ___ (not see) him for a week.","haven't seen|have not seen","we → haven't + V3 (see – saw – seen).","we → haven't + V3 (see – saw – seen).","Ми не бачили його тиждень."],
+["He ___ (break) his leg, so he can't walk.","has broken|'s broken","Result now → has + V3 (broken).","Результат зараз → has + V3 (broken).","Він зламав ногу, тому не може ходити."],
+["How long ___ (you/know) Anna?","have you known","know is a state verb → Present Perfect only; in questions have goes before you.","know — дієслово стану, лише Present Perfect; у питанні have перед you.","Як давно ти знаєш Анну?"],
+["The kids ___ (just/arrive).","have just arrived|'ve just arrived","just goes between have and V3.","just стоїть між have і V3.","Діти щойно приїхали."],
+["I ___ (never/be) to Japan.","have never been|'ve never been","never goes between have and V3; be → been.","never стоїть між have і V3; be → been.","Я ніколи не був у Японії."]]},
+{n:"Present Perfect Continuous",u:"Present Perfect Continuous",th:H2("Present Perfect Continuous","Теперішній доконано-тривалий час")+
+B("<b>Formula:</b><br>＋ have / has + <b>been</b> + V-ing — <i>He has been cooking all day.</i><br>－ haven't / hasn't + been + V-ing — <i>I haven't been eating well.</i><br>? Have / Has + subject + been + V-ing? — <i>How long have you been stir-frying?</i>","<b>Формула:</b> ствердження — have / has + been + V-ing; заперечення — haven't / hasn't + been + V-ing; питання — Have / Has + підмет + been + V-ing?")+
+H3("When do we use it?","Коли вживається?")+
+B("1) an action that started in the past and continues now (focus on duration): <i>The stew has been simmering for 2 hours.</i><br>2) an action that has just finished, with a visible result: <i>Your hands are dirty. Have you been cooking?</i><br>3) a repeated action over a period: <i>He has been cooking like crazy ever since.</i>","1) дія почалась у минулому й триває досі (наголос на тривалості); 2) дія щойно закінчилась, є видимий результат; 3) повторювана дія протягом періоду.")+
+B("<b>Markers:</b> for, since, how long, all day, all morning, lately, recently.","<b>Маркери:</b> for, since, how long, all day, all morning, lately, recently.")+
+H3("Exceptions","Винятки")+
+B("• State verbs (know, like, love, want, need, believe, understand, have = own) are <b>not used</b> in Continuous: <i>I have known him for years</i> (not have been knowing).<br>• live, work, study, wait can be used in both tenses: <i>I've lived / I've been living here for 5 years.</i>","• Дієслова стану (know, like, love, want, need, believe, understand, have = мати) не вживаються в Continuous. • live, work, study, wait можуть бути в обох часах."),
+mc:[["How long ___ these prawns?","have you been stir-frying|did you stir-fry|are you stir-fried",0,"How long + a lasting action → have you been + V-ing.","How long + тривала дія → have you been + V-ing.","Як довго ти смажиш цих креветок?"],
+["He ___ like crazy ever since.","cooks|has been cooking|is cooked",1,"ever since → the action goes on from a past moment: has been + V-ing.","ever since → дія триває від моменту в минулому: has been + V-ing.","Відтоді він готує як одержимий."],
+["Your hands are covered in flour. ___ you ___?","Have … been baking|Are … been baking|Have … been bake",0,"The process just ended and there is a result: Have + been + V-ing.","Процес щойно закінчився, є результат: Have + been + V-ing.","Твої руки в борошні. Ти пік?"],
+["I ___ English for five years.","have been learning|have learning|has been learning",0,"I → have (not has); after been we need -ing.","I → have (не has), після been потрібне -ing.","Я вчу англійську п'ять років."],
+["She ___ well lately.","isn't been eating|hasn't been eating|hasn't being eating",1,"Negative: hasn't + been + V-ing.","Заперечення: hasn't + been + V-ing.","Останнім часом вона погано харчується."],
+["I ___ him for ten years.","have been knowing|have known|know",1,"know is a state verb, not used in Continuous.","know — дієслово стану, в Continuous не вживається.","Я знаю його десять років."],
+["It ___ since morning.","has been raining|is rained|has been rain",0,"since + a lasting action: has been + V-ing.","since + тривала дія: has been + V-ing.","Дощ іде з ранку."],
+["They ___ for you for an hour!","waited|have been waiting|has been waiting",1,"The action is still going: have been waiting (They → have).","Дія триває досі: have been waiting (They → have).","Вони чекають на тебе вже годину!"],
+["Which sentence is correct?","He has been working here since 2019.|He has been work here since 2019.|He have been working here since 2019.",0,"We need: has (he) + been + V-ing.","Потрібно: has (he) + been + V-ing.","Він працює тут із 2019 року."],
+["I ___ this car since June.","have been having|have had|am having",1,"have (= own) is a state verb, so Present Perfect: have had.","have (= мати) — дієслово стану, тому Present Perfect: have had.","Ця машина в мене з червня."]],
+fb:[["The stew ___ (simmer) for two hours.","has been simmering","has + been + V-ing; for two hours shows duration.","has + been + V-ing; for two hours — тривалість.","Рагу томиться дві години."],
+["She ___ (study) since 8 o'clock.","has been studying","she → has been + studying.","she → has been + studying.","Вона вчиться з восьмої години."],
+["How long ___ (you/wait)?","have you been waiting","In questions have goes before you: have you been waiting.","У питанні have перед you: have you been waiting.","Як довго ти чекаєш?"],
+["I ___ (not sleep) well lately.","haven't been sleeping|have not been sleeping","haven't + been + V-ing; lately is the marker.","haven't + been + V-ing; lately — маркер.","Останнім часом я погано сплю."],
+["It ___ (rain) all day.","has been raining","it → has been; all day shows duration.","it → has been; all day — тривалість.","Дощ іде цілий день."],
+["They ___ (play) football since morning.","have been playing","They → have been playing.","They → have been playing.","Вони грають у футбол з ранку."],
+["He ___ (cook) all afternoon.","has been cooking","he → has been cooking.","he → has been cooking.","Він готує весь день."],
+["We ___ (talk) for an hour.","have been talking","We → have been talking.","We → have been talking.","Ми розмовляємо вже годину."],
+["___ (you/work) hard?","have you been working","Question: Have + you + been + working.","Питання: Have + you + been + working.","Ти наполегливо працюєш?"],
+["I ___ (look) for my keys for ages.","have been looking|'ve been looking","I → have been + looking.","I → have been + looking.","Я вже вічність шукаю ключі."]]},
+{n:"Perfect vs Continuous",u:"Perfect чи Continuous",th:H2("Present Perfect vs Present Perfect Continuous","Порівняння двох часів")+
+TB(["|","Present Perfect|","Present Perfect Continuous|"].map(x=>x.split("|")[0]),[
+[c("Focus","Наголос"),c("on the <b>result</b>","на результаті"),c("on the <b>process</b>, duration","на процесі, тривалості")],
+[c("Question","Питання"),"How many / How much?","How long?"],
+[c("Completion","Завершеність"),c("finished action","дія завершена"),c("may still continue","дія може тривати")],
+[c("Example","Приклад"),c("I've made 5 pies.","Я спік 5 пирогів."),c("I've been making pies all day.","Я пеку пироги цілий день.")]])+
+B("<b>Remember:</b> state verbs (know, have, like, want…) → only Present Perfect. A quantity (five chapters, three novels) usually means Present Perfect; duration (all day, for hours) means Continuous.","<b>Пам'ятайте:</b> дієслова стану — тільки Present Perfect. Кількість зазвичай вказує на Present Perfect, тривалість — на Continuous.")+
+B("<i>She has painted the kitchen. It looks great.</i> (result)<br><i>She has been painting all morning.</i> (process, she is tired)","Вона пофарбувала кухню. Вона чудово виглядає. (результат) / Вона фарбує цілий ранок. (процес, вона втомилась)"),
+mc:[["I ___ five pies today.","have made|have been making",0,"A stated number (five pies) → result → Present Perfect.","Названа кількість (five pies) → результат → Present Perfect.","Я сьогодні спік п'ять пирогів."],
+["I ___ pies all day.","have made|have been making",1,"all day = duration, process → Present Perfect Continuous.","all day — тривалість, процес → Present Perfect Continuous.","Я пеку пироги цілий день."],
+["How many pies ___ you ___?","have … made|have … been making",0,"How many → result → Present Perfect.","How many → результат → Present Perfect.","Скільки пирогів ти спік?"],
+["She ___ the report. It's ready now.","has written|has been writing",0,"The action is finished, the result matters → Present Perfect.","Дія завершена, важливий результат → Present Perfect.","Вона написала звіт. Він уже готовий."],
+["Your eyes are red. You ___.","have cried|have been crying",1,"The process just ended and we see the result → Continuous.","Процес щойно закінчився, видно наслідок → Continuous.","У тебе червоні очі. Ти плакав."],
+["He ___ Anna for ten years.","has known|has been knowing",0,"know is a state verb; Continuous is impossible.","know — дієслово стану, Continuous неможливий.","Він знає Анну десять років."],
+["She ___ three novels this year.","has written|has been writing",0,"A number (three novels) → Present Perfect.","Кількість (three novels) → Present Perfect.","Цього року вона написала три романи."],
+["They ___ for two hours and are still going.","have played|have been playing",1,"The action continues; the focus is duration → Continuous.","Дія триває досі, наголос на тривалості → Continuous.","Вони грають уже дві години й досі не зупинились."],
+["I ___ the car — now it's clean.","have washed|have been washing",0,"Finished action, visible result (clean car) → Present Perfect.","Дія завершена, є результат (чиста машина) → Present Perfect.","Я помив машину — тепер вона чиста."],
+["We ___ to this song for an hour.","have listened|have been listening",1,"for an hour, the focus is duration → Continuous.","for an hour, наголос на тривалості → Continuous.","Ми слухаємо цю пісню вже годину."]],
+fb:[["I ___ (read) this book for three hours.","have been reading|'ve been reading","for three hours → duration: have been reading.","for three hours → тривалість: have been reading.","Я читаю цю книгу вже три години."],
+["I ___ (read) five chapters so far.","have read|'ve read","five chapters is a quantity → have read.","five chapters — кількість → have read.","Поки що я прочитав п'ять розділів."],
+["She ___ (paint) the kitchen. It looks great now.","has painted|'s painted","Finished result → has painted.","Завершений результат → has painted.","Вона пофарбувала кухню. Тепер вона чудово виглядає."],
+["He ___ (paint) all morning; he's tired.","has been painting|'s been painting","all morning = process → has been painting.","all morning — процес → has been painting.","Він фарбує цілий ранок; він втомився."],
+["How many emails ___ (you/write) today?","have you written","How many → result: have you written.","How many → результат: have you written.","Скільки листів ти сьогодні написав?"],
+["How long ___ (you/learn) French?","have you been learning","How long → duration: have you been learning.","How long → тривалість: have you been learning.","Як довго ти вчиш французьку?"],
+["They ___ (know) each other since school.","have known|'ve known","know is a state verb → have known.","know — дієслово стану → have known.","Вони знають одне одного зі школи."],
+["We ___ (build) a house, and it isn't ready yet.","have been building|'ve been building","The action isn't finished → have been building.","Дія ще триває → have been building.","Ми будуємо будинок, і він ще не готовий."],
+["She ___ (have) this phone for two years.","has had|'s had","have (= own) is a state verb → has had.","have (= мати) — дієслово стану → has had.","Цей телефон у неї вже два роки."],
+["I ___ (clean) the house; now I can relax.","have cleaned|'ve cleaned","Finished action, result → have cleaned.","Дія завершена, є результат → have cleaned.","Я прибрав у домі; тепер можу відпочити."]]}
+];
+const st={},m=document.getElementById("m");
+const S=[{k:"h"}];T.forEach((t,i)=>S.push({i,k:"th"},{i,k:"mc"},{i,k:"fb"}));
+let cur=0;
+const norm=s=>s.toLowerCase().replace(/[’`]/g,"'").replace(/\s+/g," ").trim().replace(/[.?!]$/,"");
+const gs=(i,k)=>st[i+k]=st[i+k]||[];
+const BT=(e,u,a)=>`<button ${a}>${e}</button>`;
+function card(i,k,j){
+ const it=T[i][k][j],r=gs(i,k)[j];let h,res=null;
+ if(k=="mc"){const o=it[1].split("|");
+  if(r!=null)res=r==it[2];
+  const q=it[0].includes("___")?it[0].replace(/___/g,`<b class=bl>${r!=null?o[r]:"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"}</b>`):it[0];
+  h=`<div>${j+1}. ${q}</div><div class=opts>${o.map((x,n)=>`<button class="opt ${r!=null?(n==it[2]?"ok":n==r?"no":""):""}" data-a=m data-j=${j} data-n=${n} ${r!=null?"disabled":""}>${x}</button>`).join("")}</div>`;
+  if(r!=null)h+=`<div class="fb ${res?"ok":"no"}">${res?"✓ Correct! ":`✗ Incorrect: “${o[r]}” doesn't fit. The correct answer is “${o[it[2]]}”. `}${it[3]}${U((res?"Правильно! ":`Неправильно: «${o[r]}» не підходить. Правильна відповідь — «${o[it[2]]}». `)+it[4])}</div>`;
+ }else{
+  if(r)res=r.ok;
+  const inp=`<input id=i${j} data-j=${j} value="${r?r.v.replace(/"/g,"&quot;"):""}" ${r?"disabled":""} autocomplete=off autocapitalize=off>`;
+  h=`<div>${j+1}. ${it[0].replace("___",inp)} ${r?"":BT("Check","Перевірити","data-a=f data-j="+j)}</div>`;
+  if(r)h+=`<div class="fb ${res?"ok":"no"}">${res?"✓ Correct! ":`✗ Incorrect. Correct answer: <b>${it[1].split("|")[0]}</b>. `}${it[2]}${U((res?"Правильно! ":`Неправильно. Правильна відповідь: ${it[1].split("|")[0]}. `)+it[3])}</div>`;
+ }
+ return `<div class="q ${res==null?"":res?"ok":"no"}" id=c${j}>${h}</div>`;
+}
+function score(i,k){let ok=0;gs(i,k).forEach((r,j)=>{const it=T[i][k][j];if(r!=null&&(k=="mc"?r==it[2]:r.ok))ok++});return ok+" / 10"}
+function render(){
+ const s=S[cur];let h;
+ document.getElementById("tabs").innerHTML=`<button class="${s.k=="h"?"on":""}" data-g=0>🏠</button>`+T.map((t,i)=>`<button class="${s.i===i?"on":""}" data-g=${1+i*3}>${t.n}</button>`).join("");
+ if(s.k=="h")h=`<h1>English Grammar</h1>${U("Англійська граматика")}<p>Question Tags · Present Perfect · Present Perfect Continuous · comparing the tenses. Each topic has a theory slide and 2 exercises of 10 sentences with instant feedback.</p>${U("Розділові питання · Present Perfect · Present Perfect Continuous · порівняння часів. Для кожної теми: теорія та 2 вправи по 10 речень із миттєвою перевіркою.")}<div class=g>${T.map((t,i)=>`<button data-g=${1+i*3}>${i+1}. ${t.n}</button>`).join("")}</div>`;
+ else if(s.k=="th")h=T[s.i].th+`<p>${BT("Go to Exercise 1 →","До вправи 1","data-g="+(cur+1))}</p>`;
+ else{const mc=s.k=="mc";
+  h=`<div style="float:right" data-x>${BT("Reset","Скинути","data-a=r")}</div>${H2(T[s.i].n+": Exercise "+(mc?1:2),"Вправа "+(mc?1:2))}<p>${mc?"Choose the correct option.":"Open the brackets: type the correct form."} Score: <b id=sc>${score(s.i,s.k)}</b>${U((mc?"Оберіть правильний варіант.":"Відкрийте дужки: впишіть правильну форму.")+" Результат")}</p>`+T[s.i][s.k].map((_,j)=>card(s.i,s.k,j)).join("");}
+ m.innerHTML=h;document.getElementById("ct").textContent=(cur+1)+" / "+S.length;
+ document.getElementById("pv").disabled=cur==0;document.getElementById("nx").disabled=cur==S.length-1;
+ window.scrollTo(0,0);
+}
+function go(n){cur=Math.max(0,Math.min(S.length-1,n));render()}
+function upd(j){const s=S[cur];document.getElementById("c"+j).outerHTML=card(s.i,s.k,j);document.getElementById("sc").textContent=score(s.i,s.k)}
+function chk(j){const s=S[cur],el=document.getElementById("i"+j);if(!el||!el.value.trim())return;
+ const ok=T[s.i].fb[j][1].split("|").map(norm).includes(norm(el.value));gs(s.i,"fb")[j]={v:el.value,ok};upd(j)}
+document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const s=S[cur];
+ if(b.id=="pv")go(cur-1);else if(b.id=="nx")go(cur+1);
+ else if(b.dataset.g!=null)go(+b.dataset.g);
+ else if(b.dataset.a=="m"){gs(s.i,"mc")[+b.dataset.j]=+b.dataset.n;upd(+b.dataset.j)}
+ else if(b.dataset.a=="f")chk(+b.dataset.j);
+ else if(b.dataset.a=="r"){st[s.i+s.k]=[];render()}});
+document.addEventListener("keydown",e=>{
+ if(e.target.tagName=="INPUT"){if(e.key=="Enter")chk(+e.target.dataset.j);return}
+ if(e.key=="ArrowRight")go(cur+1);if(e.key=="ArrowLeft")go(cur-1)});
+render();
+</script></body></html>
